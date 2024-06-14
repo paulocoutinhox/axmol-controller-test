@@ -32,6 +32,8 @@
 #include "audio/AudioEngine.h"
 #endif
 
+#include "FairyGUI.h"
+
 USING_NS_AX;
 
 static ax::Size designResolutionSize = ax::Size(1280, 720);
@@ -71,10 +73,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0f / 60);
 
     // Set the design resolution
-    glView->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height,
-                                    ResolutionPolicy::SHOW_ALL);
+    glView->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::SHOW_ALL);
 
     // create a scene. it's an autorelease object
+    fairygui::UIPackage::addPackage("fairy-gui/Main");
     auto scene = utils::createInstance<MainScene>();
 
     // run

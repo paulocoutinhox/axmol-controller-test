@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ko9otz9c">
+  <resources>
+    <component id="x6j7x" name="GameMenuWindow.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" path="/Users/paulo/Developer/workspaces/cpp/axmol-controller-test/Content/fairy-gui" packageCount="2" codePath="/Users/paulo/Developer/workspaces/cpp/axmol-controller-test/Source/ui/fairy-gui"/>
+</packageDescription>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" bgColorEnabled="true" bgColor="#6633cc">
+  <displayList>
+    <text id="n12_lfo9" name="text1" xy="523,200" size="232,54" fontSize="40" color="#ffffff" align="center" text="Mode: None">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n13_f05a" name="text2" xy="426,363" size="427,54" fontSize="40" color="#ffffff" align="center" text="Joystick Button: None">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+</component>
