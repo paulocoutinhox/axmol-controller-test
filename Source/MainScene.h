@@ -22,7 +22,7 @@ private:
     fairygui::GRoot *groot;
     MenuWindowGUI *window;
 
-    void onJoystickButtonPressed(ax::Controller *controller, int keyCode, ax::Event *event);
+    void onControllerKeyDown(ax::Controller *controller, int keyCode, ax::Event *event);
 };
 
 #endif // __MAIN_SCENE_H__

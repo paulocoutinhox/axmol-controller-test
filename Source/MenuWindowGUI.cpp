@@ -20,17 +20,6 @@ void MenuWindowGUI::onInit() {
 #else
     text1->setText("Mode: Release");
 #endif
-
-    // add joystick listener
-    Controller::startDiscoveryController();
-    auto listener = EventListenerController::create();
-    listener->onKeyDown = AX_CALLBACK_3(MenuWindowGUI::onControllerKeyDown, this);
-
-    // get the current scene node
-    auto scene = Director::getInstance()->getRunningScene();
-    if (scene) {
-        scene->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, scene);
-    }
 }
 
 void MenuWindowGUI::onControllerKeyDown(Controller *controller, int keyCode, Event *event) {

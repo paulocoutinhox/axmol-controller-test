@@ -8,10 +8,22 @@ bool MainScene::init() {
         return false;
     }
 
+    // add joystick listener
+    Controller::startDiscoveryController();
+    auto listener = EventListenerController::create();
+    listener->onKeyDown = AX_CALLBACK_3(MainScene::onControllerKeyDown, this);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+
     // schedule update
     scheduleUpdate();
 
     return true;
+}
+
+void MainScene::onControllerKeyDown(Controller *controller, int keyCode, Event *event) {
+    if (window) {
+        window->onControllerKeyDown(controller, keyCode, event);
+    }
 }
 
 void MainScene::update(float delta) {
