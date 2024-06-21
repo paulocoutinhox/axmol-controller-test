@@ -25,24 +25,18 @@ void MenuWindowGUI::onInit() {
 void MenuWindowGUI::onControllerKeyDown(Controller *controller, int keyCode, Event *event) {
     std::string button;
 
-    if (keyCode == Controller::Key::BUTTON_X) {
-        auto scene = utils::createInstance<MainScene>();
-        Director::getInstance()->replaceScene(scene);
-        return;
-    }
-
     switch (keyCode) {
     case Controller::Key::BUTTON_DPAD_UP:
-        button = "Up";
+        button = "D Up";
         break;
     case Controller::Key::BUTTON_DPAD_DOWN:
-        button = "Down";
+        button = "D Down";
         break;
     case Controller::Key::BUTTON_DPAD_LEFT:
-        button = "Left";
+        button = "D Left";
         break;
     case Controller::Key::BUTTON_DPAD_RIGHT:
-        button = "Right";
+        button = "D Right";
         break;
     case Controller::Key::BUTTON_A:
         button = "A";
@@ -61,6 +55,15 @@ void MenuWindowGUI::onControllerKeyDown(Controller *controller, int keyCode, Eve
         break;
     case Controller::Key::BUTTON_Z:
         button = "Z";
+        break;
+    case Controller::Key::BUTTON_START:
+        button = "START";
+        break;
+    case Controller::Key::BUTTON_SELECT:
+        button = "SELECT";
+        break;
+    case Controller::Key::BUTTON_PAUSE:
+        button = "PAUSE";
         break;
     default:
         button = "None";
